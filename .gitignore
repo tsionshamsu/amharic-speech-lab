@@ -1,0 +1,27 @@
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.env
+
+# Audio / datasets
+*.wav
+*.flac
+*.mp3
+data/
+examples/outputs/
+textoutput/
+soundoutput/
+
+# Hugging Face / torch caches
+.cache/
+.huggingface/
+
+# OS junk
+.DS_Store
+
+# Others
+uroman/
+
+

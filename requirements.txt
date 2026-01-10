@@ -1,0 +1,10 @@
+torch
+torchaudio
+transformers>=4.33
+soundfile
+yt-dlp
+
+# Using pytorch for the models
+# torchaudo for audio loading and resampling for ASR
+# soundfile for writing WAV files for the TTS output
+# and yt-dlp to extract the audio from youtube
