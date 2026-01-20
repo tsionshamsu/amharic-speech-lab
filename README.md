@@ -1,6 +1,6 @@
 # amharic-speech-lab
 
-## 🌍 Overview
+## Overview
 
 **amharic-speech-lab** is a research-oriented personal project of mine focused on **automatic speech recognition (ASR)** and **text-to-speech (TTS)** for **Amharic**, a low-resource language that remains underrepresented in modern speech systems.
 
@@ -12,15 +12,15 @@ The project currently implements a clean, end-to-end baseline pipeline using Met
 
 The goal of this repository is not only to demonstrate a working pipeline, but to serve as a foundation for future **fine-tuning, evaluation, and voice modeling experiments** for Amharic.
 
-## 💡 Motivation
+## Motivation
 
 As kids, my brothers and I used to treat tools like Google Translate almost like a game — typing in Amharic words and laughing at the often strange or unintentionally funny outputs we got back. It was extremely entertaining, but it also made clear how limited existing systems were when it came to the language. Alongside this, my interest in languages more broadly (shaped in part by studying Latin) and my background as a computer science major naturally pulled me toward machine learning as a way to think about language as a structured, evolving system.
 
 Amharic is spoken by tens of millions of people, yet it remains low-resource in many modern speech models. This project is an initial attempt to explore that gap by building and evaluating strong multilingual ASR and TTS baselines, understanding where they break down, and iterating from there. It’s very much a work in progress — there are multiple rough edges and occasional mistakes that can be genuinely funny — so if nothing else, I hope anyone trying it out gets at least a small laugh from those moments, the same way my brothers and I did as kids.
 
-## ⚙️ Current Capabilities
+## Current Capabilities
 
-### 🎧 YouTube Audio Ingestion
+### YouTube Audio Ingestion
 
 Audio is downloaded from YouTube and converted into a standardized format suitable for speech models:
 
@@ -30,7 +30,7 @@ Audio is downloaded from YouTube and converted into a standardized format suitab
 
 This allows rapid testing on real-world Amharic speech.
 
-### 🗣️ Automatic Speech Recognition (ASR)
+### Automatic Speech Recognition (ASR)
 
 - Model: `facebook/mms-1b-all` with Amharic adapter
 - Architecture: CTC-based Wav2Vec2
@@ -43,7 +43,7 @@ The ASR pipeline supports:
 
 Note: The model outputs lexical content only; punctuation and sentence boundaries are not predicted.
 
-### 🔊 Text-to-Speech (TTS)
+### Text-to-Speech (TTS)
 
 - Model: `facebook/mms-tts-amh`
 - Architecture: VITS
@@ -53,9 +53,9 @@ Because MMS-TTS expects romanized input, the pipeline uses **uroman** as a prepr
 
 The current TTS model is single-speaker. Voice characteristics (including perceived gender) are fixed by the training data and cannot be controlled at inference time.
 
-## 🧪 Setup
+## Setup
 
-### 📦 Install dependencies
+### Install dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -63,7 +63,7 @@ pip install -r requirements.txt
 
 Torch installation may vary by platform. If `pip install torch` fails, please follow the official PyTorch installation instructions for your system.
 
-### 🔤 Clone uroman
+### Clone uroman
 
 `uroman` is used for Ethiopic → Latin romanization during TTS preprocessing.
 
@@ -95,7 +95,7 @@ python scripts/tts_mms.py \
   --out soundoutput/example_tts.wav
 ```
 
-## ⚠️ Known Limitations
+## Known Limitations
 
 - ASR output does not include punctuation or sentence boundaries
 - TTS is single-speaker with no gender or style control
@@ -104,7 +104,7 @@ python scripts/tts_mms.py \
 
 These limitations are intentional for a baseline and are addressed in the roadmap below.
 
-## 🛣️ Roadmap
+## Roadmap
 
 Planned next steps include:
 
@@ -121,12 +121,12 @@ Planned next steps include:
   - Quantitative ASR metrics
   - Qualitative TTS analysis (prosody, intelligibility)
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - Meta AI for the MMS models
 - ISI NLP for `uroman`
 - Kaggle contributors for open Amharic speech datasets
 
-## 📄 License
+## License
 
 This repository is intended for research and educational use. Please refer to individual model and dataset licenses for usage constraints.
