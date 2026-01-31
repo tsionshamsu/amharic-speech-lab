@@ -102,7 +102,7 @@ python scripts/tts_mms.py \
 - Romanization is required for MMS-TTS, which may affect naturalness
 - No fine-tuning has been applied yet
 
-These limitations are intentional for a baseline and are addressed in the roadmap below.
+These limitations are just for the baseline project and the roadmap below shows some of my plans to address them.
 
 ## Roadmap
 
