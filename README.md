@@ -110,6 +110,7 @@ Planned next steps include:
 
 - ASR fine-tuning
   - Convert the Kaggle Amharic Speech Corpus (Kaldi format) into Hugging Face datasets
+  - Perhaps even create a new corpus that's extensive, it's low-resource for a reason and better organized data would definitely help
   - Fine-tune MMS ASR and evaluate using WER / CER
 
 - Female-voice TTS fine-tuning
